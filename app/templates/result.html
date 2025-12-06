@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Invoice Result</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Extracted Invoice Data</h1>
+
+    <section class="card">
+      <h2>Structured Fields</h2>
+      <ul>
+        <li><strong>Invoice Number:</strong> {{ invoice.invoice_number }}</li>
+        <li><strong>Invoice Date:</strong> {{ invoice.invoice_date }}</li>
+        <li><strong>Supplier Name:</strong> {{ invoice.supplier_name }}</li>
+        <li><strong>Total Amount:</strong> {{ invoice.total_amount }}</li>
+        <li><strong>Currency:</strong> {{ invoice.currency }}</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Raw Text (for debugging)</h2>
+      <pre>{{ raw_text }}</pre>
+    </section>
+
+    <p><a href="/">Upload another invoice</a></p>
+  </main>
+</body>
+</html>
